@@ -1,0 +1,147 @@
+{
+    "site": {
+        "title": "Norden",
+        "role": "Digital Designer",
+        "availability": "Available",
+        "footer": {
+            "copyright": "© By Gola Templates.",
+            "links": [
+                {
+                    "label": "About",
+                    "href": "/about"
+                },
+                {
+                    "label": "Contact",
+                    "href": "/contact"
+                },
+                {
+                    "label": "Work",
+                    "href": "/work"
+                },
+                {
+                    "label": "Work Single",
+                    "href": "/work/hanssen"
+                },
+                {
+                    "label": "Blog",
+                    "href": "/blog"
+                },
+                {
+                    "label": "Blog Single",
+                    "href": "/blog/design-trends"
+                }
+            ]
+        }
+    },
+    "navigation": [
+        {
+            "label": "Menu",
+            "href": "/menu"
+        }
+    ],
+    "about": {
+        "intro": "Hi, I'm Elias:\nWeb Designer & Developer",
+        "description": "I create custom websites that blend creativity and functionality, using Framer and Webflow to craft unique digital experiences for each client.",
+        "image": "/images/elias-portrait.jpg",
+        "awards": [
+            {
+                "title": "Best Web Design of the Year",
+                "year": "2024"
+            },
+            {
+                "title": "Excellence in UX/UI Design",
+                "year": "2024"
+            },
+            {
+                "title": "Innovation in Digital Experiences",
+                "year": "2023"
+            },
+            {
+                "title": "Top Framer Website Design",
+                "year": "2023"
+            },
+            {
+                "title": "Outstanding Webflow Project Award",
+                "year": "2022"
+            },
+            {
+                "title": "Creative Excellence in Web Design",
+                "year": "2022"
+            }
+        ],
+        "socials": [
+            {
+                "platform": "Instagram",
+                "url": "#",
+                "icon": "instagram"
+            },
+            {
+                "platform": "Pinterest",
+                "url": "#",
+                "icon": "pinterest"
+            },
+            {
+                "platform": "Behance",
+                "url": "#",
+                "icon": "behance"
+            },
+            {
+                "platform": "Twitter",
+                "url": "#",
+                "icon": "twitter"
+            }
+        ]
+    },
+    "work": [
+        {
+            "id": "hanssen",
+            "title": "Hanssen",
+            "category": "Commercial",
+            "year": "2024",
+            "client": "Vogue",
+            "location": "Prague",
+            "description": "From concept to launch, I create websites with stunning visuals, seamless user experiences.",
+            "testimonial": {
+                "text": "Outstanding creativity & professional service from Magnus.",
+                "author": "Magnus",
+                "rating": 5
+            },
+            "images": [
+                "/images/work-1.jpg",
+                "/images/work-detail-1.jpg"
+            ]
+        },
+        {
+            "id": "fjord",
+            "title": "Fjord",
+            "category": "Furniture",
+            "year": "2024",
+            "images": [
+                "/images/work-2.jpg"
+            ]
+        },
+        {
+            "id": "ayano",
+            "title": "Ayano",
+            "category": "Architecture",
+            "year": "2023",
+            "images": [
+                "/images/work-3.jpg"
+            ]
+        },
+        {
+            "id": "qitchen",
+            "title": "Qitchen",
+            "category": "Restaurant",
+            "year": "2023",
+            "images": [
+                "/images/work-4.jpg"
+            ]
+        }
+    ],
+    "contact": {
+        "title": "Let's Talk",
+        "subtitle": "Let's collaborate! Reach out to discuss your next project today.",
+        "email": "hello@eliasnorden.com"
+    }
+}
