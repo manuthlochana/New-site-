@@ -8,8 +8,10 @@
   --accent-green: #2ecc71;
   --accent-orange: #e74c3c;
   --text-muted: #888888;
-  --radius: 32px;
-  /* Increased radius */
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+  --radius: var(--radius-lg);
   --font-sans: var(--font-inter);
   --max-width: 1440px;
 }

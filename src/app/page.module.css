@@ -1,26 +1,43 @@
 .hero {
-  padding: 60px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 60vh;
+  min-height: auto;
+  gap: 32px;
 }
 
 .heroImageWrapper {
-  display: none;
-  /* Hidden on mobile by default, shown on desktop */
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  /* Square for mobile portrait */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #222;
+  order: -1;
+  /* Show above text on mobile */
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .heroTitle {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  /* Fluid typography */
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 24px;
   color: var(--foreground);
-  /* Fallback */
-  /* Dynamic gradient based on theme would require more complex setup, 
-     simplifying to solid color for readability first, or using variable if defined. 
-     For now, removing the hardcoded white gradient is key. */
+  letter-spacing: -0.02em;
 }
 
 .heroSubtitle {
@@ -28,19 +45,19 @@
   color: var(--text-muted);
   max-width: 600px;
   line-height: 1.6;
-  margin-bottom: 40px;
 }
 
 .heroButtons {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btnPrimary {
   background: var(--foreground);
   color: var(--background);
   padding: 16px 32px;
-  border-radius: 50px;
+  border-radius: var(--radius-full);
   font-weight: 500;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -51,7 +68,7 @@
   color: var(--foreground);
   border: 1px solid var(--border);
   padding: 16px 32px;
-  border-radius: 50px;
+  border-radius: var(--radius-full);
   font-weight: 500;
   text-decoration: none;
   transition: background 0.2s;
@@ -73,7 +90,7 @@
 }
 
 .sectionTitle {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 400;
 }
 
@@ -85,7 +102,8 @@
 /* Work Grid */
 .workGrid {
   display: grid;
-  gap: 32px;
+  gap: 16px;
+  /* Reduced gap for mobile */
 }
 
 .workCard {
@@ -94,7 +112,7 @@
 }
 
 .workImage {
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: 16px;
   aspect-ratio: 4/3;
@@ -105,7 +123,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  transition: transform 0.5s ease;
 }
 
 .workCard:hover .workImage img {
@@ -126,13 +144,14 @@
 /* Services */
 .servicesGrid {
   display: grid;
-  gap: 24px;
+  gap: 16px;
+  /* Reduced gap for mobile */
 }
 
 .serviceCard {
   background: var(--card-bg);
-  padding: 32px;
-  border-radius: var(--radius);
+  padding: 24px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
   transition: transform 0.2s, border-color 0.2s;
 }
@@ -162,13 +181,13 @@
 /* Testimonials */
 .testimonialsGrid {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .testimonialCard {
   background: var(--card-bg);
-  padding: 32px;
-  border-radius: var(--radius);
+  padding: 24px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--border);
 }
 
@@ -202,13 +221,13 @@
 /* Pricing */
 .pricingGrid {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .pricingCard {
   background: var(--card-bg);
-  padding: 40px;
-  border-radius: var(--radius);
+  padding: 32px;
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +266,7 @@
   background: var(--background);
   color: var(--foreground);
   padding: 16px 32px;
-  border-radius: 50px;
+  border-radius: var(--radius-full);
   text-decoration: none;
   font-weight: 500;
   width: 100%;
@@ -263,7 +282,7 @@
 
 .faqItem {
   background: var(--card-bg);
-  border-radius: 16px;
+  border-radius: var(--radius-md);
   overflow: hidden;
 }
 
@@ -302,37 +321,21 @@ details[open] .faqQuestion::after {
   .hero {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    /* Text takes more space */
     align-items: center;
     gap: 60px;
     text-align: left;
     padding: 100px 0;
-  }
-
-  .heroContent {
-    order: 1;
+    min-height: 80vh;
   }
 
   .heroImageWrapper {
     order: 2;
-    display: block;
-    /* Show on desktop */
-    width: 100%;
+    /* Reset order for desktop */
     aspect-ratio: 3/4;
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: #222;
   }
 
-  .heroImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .heroTitle {
-    font-size: 4.5rem;
-    margin-bottom: 32px;
+  .heroContent {
+    order: 1;
   }
 
   .heroSubtitle {
@@ -342,18 +345,23 @@ details[open] .faqQuestion::after {
 
   .workGrid {
     grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    /* Restore larger gap for desktop */
   }
 
   .servicesGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .testimonialsGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 
   .pricingGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 

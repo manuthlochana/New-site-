@@ -1,14 +1,18 @@
 {
     "site": {
-        "title": "Norden",
-        "role": "Digital Designer",
-        "availability": "Available",
+        "title": "Manuth Lochana",
+        "role": "Software Engineer & Student",
+        "availability": "Available for Hire",
         "footer": {
-            "copyright": "© By Gola Templates.",
+            "copyright": "© 2025 Manuth Lochana.",
             "links": [
                 {
                     "label": "Home",
                     "href": "/"
+                },
+                {
+                    "label": "Work",
+                    "href": "/work"
                 },
                 {
                     "label": "About",
@@ -19,20 +23,12 @@
                     "href": "/contact"
                 },
                 {
-                    "label": "Work",
-                    "href": "/work"
-                },
-                {
-                    "label": "Work Single",
-                    "href": "/work/hanssen"
-                },
-                {
                     "label": "Blog",
                     "href": "/blog"
                 },
                 {
-                    "label": "Blog Single",
-                    "href": "/blog/design-trends"
+                    "label": "Admin",
+                    "href": "/admin"
                 }
             ]
         }
@@ -44,203 +40,176 @@
         }
     ],
     "about": {
-        "intro": "Hi, I'm Elias:\nWeb Designer & Developer",
-        "description": "I create custom websites that blend creativity and functionality, using Framer and Webflow to craft unique digital experiences for each client.",
-        "image": "/images/elias-portrait.png",
+        "intro": "Hi, I'm Manuth:\nSoftware Engineer & Student",
+        "description": "I bridge the gap between complex backend logic and beautiful frontend design. I specialize in Modern Web Development, Android (Kotlin), and Technical Writing.",
+        "image": "/images/manuth-portrait.jpg",
         "awards": [
             {
-                "title": "Best Web Design of the Year",
+                "title": "Windsurf for Android Research",
+                "year": "2025"
+            },
+            {
+                "title": "Google Antigravity Analysis",
+                "year": "2025"
+            },
+            {
+                "title": "3D Virtual Portfolio Innovation",
                 "year": "2024"
-            },
-            {
-                "title": "Excellence in UX/UI Design",
-                "year": "2024"
-            },
-            {
-                "title": "Innovation in Digital Experiences",
-                "year": "2023"
-            },
-            {
-                "title": "Top Framer Website Design",
-                "year": "2023"
-            },
-            {
-                "title": "Outstanding Webflow Project Award",
-                "year": "2022"
-            },
-            {
-                "title": "Creative Excellence in Web Design",
-                "year": "2022"
             }
         ],
         "socials": [
             {
-                "platform": "Instagram",
-                "url": "#",
-                "icon": "instagram"
+                "platform": "Medium",
+                "url": "https://medium.com/@manuthlochana",
+                "icon": "medium"
             },
             {
-                "platform": "Pinterest",
-                "url": "#",
-                "icon": "pinterest"
+                "platform": "Dev.to",
+                "url": "https://dev.to/manuthlochana",
+                "icon": "dev"
             },
             {
-                "platform": "Behance",
-                "url": "#",
-                "icon": "behance"
-            },
-            {
-                "platform": "Twitter",
-                "url": "#",
-                "icon": "twitter"
+                "platform": "About.me",
+                "url": "https://about.me/manuthlochana",
+                "icon": "link"
             }
         ]
     },
     "work": [
         {
-            "id": "hanssen",
-            "title": "Hanssen",
-            "category": "Commercial",
-            "year": "2024",
-            "client": "Vogue",
-            "location": "Prague",
-            "description": "From concept to launch, I create websites with stunning visuals, seamless user experiences.",
+            "id": "windsurf-android",
+            "title": "Windsurf for Android",
+            "category": "Technical Writing",
+            "year": "2025",
+            "client": "Research",
+            "location": "Remote",
+            "description": "In-depth research and technical writing on Windsurf for Android, exploring its capabilities and impact.",
             "testimonial": {
-                "text": "Outstanding creativity & professional service from Magnus.",
-                "author": "Magnus",
+                "text": "An insightful piece that clarifies complex technical concepts.",
+                "author": "Tech Reviewer",
                 "rating": 5
             },
             "images": [
-                "/images/work-1.jpg",
-                "/images/work-detail-1.jpg"
+                "/images/work-windsurf.jpg"
             ]
         },
         {
-            "id": "fjord",
-            "title": "Fjord",
-            "category": "Furniture",
+            "id": "antigravity-analysis",
+            "title": "Google Antigravity",
+            "category": "Tech Review",
+            "year": "2025",
+            "images": [
+                "/images/work-antigravity.jpg"
+            ]
+        },
+        {
+            "id": "3d-portfolio",
+            "title": "3D Virtual Portfolio",
+            "category": "Web Experiment",
             "year": "2024",
             "images": [
-                "/images/work-2.jpg"
-            ]
-        },
-        {
-            "id": "ayano",
-            "title": "Ayano",
-            "category": "Architecture",
-            "year": "2023",
-            "images": [
-                "/images/work-3.jpg"
-            ]
-        },
-        {
-            "id": "qitchen",
-            "title": "Qitchen",
-            "category": "Restaurant",
-            "year": "2023",
-            "images": [
-                "/images/work-4.jpg"
+                "/images/work-3droom.jpg"
             ]
         }
     ],
     "contact": {
         "title": "Let's Talk",
         "subtitle": "Let's collaborate! Reach out to discuss your next project today.",
-        "email": "hello@eliasnorden.com"
+        "email": "contact@manuthlochana.com"
     },
     "home": {
         "hero": {
-            "title": "Your Digital Vision,<br>Perfectly Realized.",
-            "subtitle": "I create custom websites that blend creativity and functionality, using Framer and Webflow to craft unique digital experiences for each client.",
+            "title": "Bridging Logic<br>& Design.",
+            "subtitle": "I specialize in Modern Web Development, Android (Kotlin), and Technical Writing. Based in Hakmana, Sri Lanka.",
             "ctaPrimary": "See Work",
             "ctaSecondary": "Contact Me"
         },
         "services": [
             {
-                "title": "Web Design",
-                "description": "Crafting visually stunning and user-centric designs.",
-                "icon": "🎨"
-            },
-            {
-                "title": "Webflow Dev",
-                "description": "Building responsive and high-performance websites.",
+                "title": "Web Development",
+                "description": "Building responsive, high-performance web applications with Next.js and React.",
                 "icon": "💻"
             },
             {
-                "title": "SEO Optimization",
-                "description": "Improving visibility and ranking on search engines.",
-                "icon": "🚀"
+                "title": "Android Dev",
+                "description": "Creating native Android applications using Kotlin and modern Android practices.",
+                "icon": "📱"
             },
             {
-                "title": "Brand Identity",
-                "description": "Creating unique and memorable brand experiences.",
-                "icon": "✨"
+                "title": "Technical Writing",
+                "description": "Translating complex technical concepts into clear, engaging documentation and articles.",
+                "icon": "✍️"
+            },
+            {
+                "title": "UI/UX Engineering",
+                "description": "Implementing pixel-perfect designs with a focus on user experience and accessibility.",
+                "icon": "🎨"
             }
         ],
         "testimonials": [
             {
-                "text": "Elias delivered beyond our expectations. The site is beautiful and fast.",
-                "author": "Sarah Jenkins",
-                "role": "CEO, TechStart",
+                "text": "Manuth has a unique ability to understand both the code and the design.",
+                "author": "Project Lead",
+                "role": "Tech Co.",
                 "rating": 5
             },
             {
-                "text": "A true professional. The attention to detail is unmatched.",
-                "author": "David Miller",
-                "role": "Founder, Studio X",
+                "text": "His technical writing is top-notch and very easy to follow.",
+                "author": "Editor",
+                "role": "Tech Blog",
                 "rating": 5
             },
             {
-                "text": "Our conversion rates doubled after the redesign. Highly recommended!",
-                "author": "Emily Chen",
-                "role": "Marketing Dir, GrowthCo",
+                "text": "Great attention to detail in every project.",
+                "author": "Client",
+                "role": "Startup",
                 "rating": 5
             }
         ],
         "pricing": [
             {
                 "title": "Basic",
-                "price": "$2,500",
+                "price": "$500",
                 "features": [
-                    "5 Pages",
+                    "Single Page App",
                     "Responsive Design",
-                    "SEO Basics",
+                    "Basic SEO",
                     "1 Week Support"
                 ]
             },
             {
-                "title": "Pro",
-                "price": "$4,500",
+                "title": "Standard",
+                "price": "$1,500",
                 "features": [
-                    "10 Pages",
+                    "Multi-page Website",
                     "CMS Integration",
                     "Advanced SEO",
                     "1 Month Support"
                 ]
             },
             {
-                "title": "Enterprise",
+                "title": "Premium",
                 "price": "Custom",
                 "features": [
-                    "Unlimited Pages",
-                    "Custom Functionality",
-                    "Priority Support",
-                    "Strategy Session"
+                    "Full Stack App",
+                    "Custom Backend",
+                    "Mobile App (Android)",
+                    "Priority Support"
                 ]
             }
         ],
         "faq": [
             {
-                "question": "What is your design process?",
-                "answer": "I start with discovery, then move to wireframing, design, and finally development."
+                "question": "What technologies do you use?",
+                "answer": "I primarily use Next.js, React, TypeScript, and Kotlin for Android."
             },
             {
-                "question": "How long does a project take?",
-                "answer": "Typically 2-4 weeks depending on the complexity and scope of the project."
+                "question": "Are you available for freelance work?",
+                "answer": "Yes, I am currently open to freelance opportunities and collaborations."
             },
             {
-                "question": "Do you offer maintenance?",
-                "answer": "Yes, I offer ongoing support packages to keep your site running smoothly."
+                "question": "Where are you based?",
+                "answer": "I am based in Hakmana, Sri Lanka, but I work remotely with clients worldwide."
             }
         ]
     }
