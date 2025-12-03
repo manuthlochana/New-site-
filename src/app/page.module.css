@@ -1,141 +1,364 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+.hero {
+  padding: 60px 0;
   display: flex;
-  min-height: 100vh;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  min-height: 60vh;
 }
 
-.main {
+.heroImageWrapper {
+  display: none;
+  /* Hidden on mobile by default, shown on desktop */
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--foreground);
+  /* Fallback */
+  /* Dynamic gradient based on theme would require more complex setup, 
+     simplifying to solid color for readability first, or using variable if defined. 
+     For now, removing the hardcoded white gradient is key. */
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.heroButtons {
   display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
+  gap: 16px;
+}
+
+.btnPrimary {
+  background: var(--foreground);
+  color: var(--background);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: var(--card-bg);
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+.sectionHeader {
+  display: flex;
   justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  align-items: baseline;
+  margin-bottom: 32px;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.linkArrow {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Work Grid */
+.workGrid {
+  display: grid;
+  gap: 32px;
+}
+
+.workCard {
+  display: block;
+  text-decoration: none;
+}
+
+.workImage {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 16px;
+  aspect-ratio: 4/3;
+  background: #222;
+}
+
+.workImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.workCard:hover .workImage img {
+  transform: scale(1.05);
+}
+
+.workTitle {
+  font-size: 1.2rem;
+  color: var(--foreground);
+  font-weight: 400;
+}
+
+.workCat {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Services */
+.servicesGrid {
+  display: grid;
   gap: 24px;
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.serviceCard {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.serviceCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--foreground);
 }
 
-.intro a {
+.serviceIcon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
   font-weight: 500;
-  color: var(--text-primary);
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+.serviceDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-.ctas a {
+/* Testimonials */
+.testimonialsGrid {
+  display: grid;
+  gap: 24px;
+}
+
+.testimonialCard {
+  background: var(--card-bg);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.stars {
+  color: var(--accent-orange);
+  margin-bottom: 16px;
+}
+
+.testimonialText {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonialAuthor {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.authorName {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.authorRole {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Pricing */
+.pricingGrid {
+  display: grid;
+  gap: 24px;
+}
+
+.pricingCard {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
+  text-align: center;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.pricingCard:hover {
+  border-color: var(--border);
+}
+
+.planTitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.planPrice {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.planFeatures {
+  list-style: none;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.planBtn {
+  background: var(--background);
+  color: var(--foreground);
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
   font-weight: 500;
+  width: 100%;
+  border: 1px solid var(--border);
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+/* FAQ */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.faqItem {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+.faqQuestion {
+  padding: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+details[open] .faqQuestion::after {
+  content: '-';
+}
+
+.faqAnswer {
+  padding: 0 24px 24px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    /* Text takes more space */
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+    padding: 100px 0;
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  .heroContent {
+    order: 1;
+  }
+
+  .heroImageWrapper {
+    order: 2;
+    display: block;
+    /* Show on desktop */
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #222;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .heroTitle {
+    font-size: 4.5rem;
+    margin-bottom: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+    max-width: 90%;
+  }
+
+  .workGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pricingGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

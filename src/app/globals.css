@@ -1,13 +1,31 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171b1c;
+  --foreground: #ffffff;
+  --card-bg: #1e2324;
+  /* Slightly lighter than bg */
+  --border: #333839;
+  /* Slightly lighter border for visibility */
+  --accent-green: #2ecc71;
+  --accent-orange: #e74c3c;
+  --text-muted: #888888;
+  --radius: 32px;
+  /* Increased radius */
+  --font-sans: var(--font-inter);
+  --max-width: 1440px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme='light'] {
+  --background: #f5f5f5;
+  --foreground: #171b1c;
+  --card-bg: #ffffff;
+  --border: #e5e5e5;
+  --text-muted: #666666;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
@@ -19,15 +37,22 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* Main App Container - Full Width for Desktop */
+#app-root {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 a {
@@ -35,8 +60,42 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+.text-muted {
+  color: var(--text-muted);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.btn-full {
+  width: 100%;
 }

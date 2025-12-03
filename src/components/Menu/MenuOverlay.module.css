@@ -1,0 +1,58 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--foreground);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 20px;
+    background: var(--card-bg);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+
+.link {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--foreground);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.link:hover {
+    opacity: 0.6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

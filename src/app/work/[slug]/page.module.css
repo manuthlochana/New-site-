@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.meta {
+    display: flex;
+    gap: 16px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.imageWrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #222;
+}
+
+.imageWrapper img {
+    width: 100%;
+    display: block;
+}

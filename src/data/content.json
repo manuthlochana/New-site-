@@ -7,6 +7,10 @@
             "copyright": "© By Gola Templates.",
             "links": [
                 {
+                    "label": "Home",
+                    "href": "/"
+                },
+                {
                     "label": "About",
                     "href": "/about"
                 },
@@ -42,7 +46,7 @@
     "about": {
         "intro": "Hi, I'm Elias:\nWeb Designer & Developer",
         "description": "I create custom websites that blend creativity and functionality, using Framer and Webflow to craft unique digital experiences for each client.",
-        "image": "/images/elias-portrait.jpg",
+        "image": "/images/elias-portrait.png",
         "awards": [
             {
                 "title": "Best Web Design of the Year",
@@ -143,5 +147,101 @@
         "title": "Let's Talk",
         "subtitle": "Let's collaborate! Reach out to discuss your next project today.",
         "email": "hello@eliasnorden.com"
+    },
+    "home": {
+        "hero": {
+            "title": "Your Digital Vision,<br>Perfectly Realized.",
+            "subtitle": "I create custom websites that blend creativity and functionality, using Framer and Webflow to craft unique digital experiences for each client.",
+            "ctaPrimary": "See Work",
+            "ctaSecondary": "Contact Me"
+        },
+        "services": [
+            {
+                "title": "Web Design",
+                "description": "Crafting visually stunning and user-centric designs.",
+                "icon": "🎨"
+            },
+            {
+                "title": "Webflow Dev",
+                "description": "Building responsive and high-performance websites.",
+                "icon": "💻"
+            },
+            {
+                "title": "SEO Optimization",
+                "description": "Improving visibility and ranking on search engines.",
+                "icon": "🚀"
+            },
+            {
+                "title": "Brand Identity",
+                "description": "Creating unique and memorable brand experiences.",
+                "icon": "✨"
+            }
+        ],
+        "testimonials": [
+            {
+                "text": "Elias delivered beyond our expectations. The site is beautiful and fast.",
+                "author": "Sarah Jenkins",
+                "role": "CEO, TechStart",
+                "rating": 5
+            },
+            {
+                "text": "A true professional. The attention to detail is unmatched.",
+                "author": "David Miller",
+                "role": "Founder, Studio X",
+                "rating": 5
+            },
+            {
+                "text": "Our conversion rates doubled after the redesign. Highly recommended!",
+                "author": "Emily Chen",
+                "role": "Marketing Dir, GrowthCo",
+                "rating": 5
+            }
+        ],
+        "pricing": [
+            {
+                "title": "Basic",
+                "price": "$2,500",
+                "features": [
+                    "5 Pages",
+                    "Responsive Design",
+                    "SEO Basics",
+                    "1 Week Support"
+                ]
+            },
+            {
+                "title": "Pro",
+                "price": "$4,500",
+                "features": [
+                    "10 Pages",
+                    "CMS Integration",
+                    "Advanced SEO",
+                    "1 Month Support"
+                ]
+            },
+            {
+                "title": "Enterprise",
+                "price": "Custom",
+                "features": [
+                    "Unlimited Pages",
+                    "Custom Functionality",
+                    "Priority Support",
+                    "Strategy Session"
+                ]
+            }
+        ],
+        "faq": [
+            {
+                "question": "What is your design process?",
+                "answer": "I start with discovery, then move to wireframing, design, and finally development."
+            },
+            {
+                "question": "How long does a project take?",
+                "answer": "Typically 2-4 weeks depending on the complexity and scope of the project."
+            },
+            {
+                "question": "Do you offer maintenance?",
+                "answer": "Yes, I offer ongoing support packages to keep your site running smoothly."
+            }
+        ]
     }
 }

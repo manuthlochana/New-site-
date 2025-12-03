@@ -1,0 +1,166 @@
+.lightThemeWrapper {
+    /* Force light theme variables locally - BUT respect global theme if user toggles? 
+     The prompt says "Light Mode: Off-white background... as seen in Contact.jpg".
+     However, it also says "Dual Theme Support... Theme Toggle".
+     If the user toggles Dark Mode, the Contact page should probably be Dark too.
+     So I will REMOVE the forced light theme variables and let the global theme handle it.
+     The "Contact.jpg" just shows what it looks like in Light Mode.
+  */
+
+    background: var(--background);
+    min-height: 100vh;
+    color: var(--foreground);
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    background: var(--card-bg);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--foreground);
+    outline: none;
+    border: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: var(--border);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.submitBtn {
+    background: var(--foreground);
+    color: var(--background);
+    padding: 20px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+    opacity: 0.9;
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.socialItem {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    color: var(--foreground);
+}
+
+.bookCall {
+    margin-top: 16px;
+}
+
+.bookBtn {
+    width: 100%;
+    background: var(--foreground);
+    color: var(--background);
+    padding: 24px;
+    border-radius: 16px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+    .lightThemeWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    /* We need to target the PageLayout content wrapper. 
+     Since PageLayout wraps children in main, we might need to target the children of .lightThemeWrapper directly 
+     or ensure the PageLayout itself is constrained. 
+     Actually, PageLayout has a max-width of 1440px from globals.
+     We want the Contact content specifically to be narrower.
+  */
+
+    /* The PageLayout renders children inside main. 
+     So these styles apply to the content inside main.
+  */
+
+    .header,
+    .form,
+    .socials,
+    .bookCall {
+        width: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .socials {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 40px;
+    }
+}
